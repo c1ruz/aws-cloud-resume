@@ -3,7 +3,7 @@ name: "Terraform Apply"
 on:
   push:
     branches:
-      - main
+      - update-tf-conf
 
 env:
   TF_CLOUD_ORGANIZATION: "leonardo-aws-cloud-resume"
