@@ -55,10 +55,7 @@ resource "aws_s3_bucket_cors_configuration" "bucket_cors" {
   }
 }
 
-resource "aws_s3_bucket_policy" "allow_access_to_bucket_objects" {
-  bucket = aws_s3_bucket.s3_bucket.id
-  policy = data.aws_iam_policy_document.allow_access_to_bucket_objects_policy.json
-}
+
 
 data "aws_iam_policy_document" "allow_access_to_bucket_objects_policy" {
   statement {
