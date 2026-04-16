@@ -1,5 +1,5 @@
-output "base_url" {
-  description = "Base URL for API Gateway stage."
+output "website_url" {
+  description = "Bucket website endpoint"
 
-  value = aws_apigatewayv2_stage.lambda_api.invoke_url
+  value = aws_s3_bucket.s3_bucket.website_endpoint
 }
