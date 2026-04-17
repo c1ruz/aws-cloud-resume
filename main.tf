@@ -72,7 +72,7 @@ data "aws_iam_policy_document" "allow_access_to_bucket_objects_policy" {
     ]
 
     resources = [
-      "arn:aws:s3:::awscloudresume1.org/*",
+      "arn:aws:s3:::awscloudresume.org/*",
     ]
   }
 }
