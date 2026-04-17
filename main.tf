@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "awscloudresume1.org"
+  bucket = "awscloudresume.org"
 
 }
 
