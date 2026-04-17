@@ -5,7 +5,6 @@ from decimal import Decimal
 
 # Initialize the DynamoDB resource outside the handler for connection reuse
 dynamodb = boto3.resource('dynamodb')
-# REPLACEMENT REQUIRED: Change this to your actual DynamoDB table name
 table = dynamodb.Table('WebsiteCounter') 
 
 def lambda_handler(event, context):
@@ -23,7 +22,6 @@ def lambda_handler(event, context):
             Key={
                 'page_id': page_id
             },
-            # 'ADD' is an atomic operator in DynamoDB
             UpdateExpression='ADD visit_count :increment',
             ExpressionAttributeValues={
                 ':increment': 1
